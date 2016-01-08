@@ -1,0 +1,52 @@
+.phonX {
+	background-color: red;
+	border: 2px solid black;
+	border-radius: 2px;
+	font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+	font-size: 8px;
+	padding-right: 4px;
+}
+
+.phonX section {
+	line-height: 7;
+}
+
+.feedMe {
+	background-color: pink;
+	border: 2px solid black;
+	border-radius: 55px;
+	font-family: Times, "Times New Roman", Georgia, serif;
+	font-size: 22px;
+	padding-left: 4px;
+}
+
+.feedMe section {
+	line-height: 2;
+}
+
+.excision {
+	background-color: gray;
+	border: 2px solid black;
+	border-radius: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding-top: 4px;
+}
+
+.excision section {
+	line-height: 1;
+}
+
+.datsik {
+	background-color: lightblue;
+	border: 2px solid black;
+	border-radius: 16px;
+	font-family: "Lucida Console", Courier, monospace;
+	font-size: 18px;
+	padding-bottom: 4px;
+}
+
+.datsik section {
+	line-height: 5;
+}
+
