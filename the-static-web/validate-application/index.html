@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+
+
+
+<form action="form.html" method="POST">
+		
+		<fieldset>
+
+<!-- Applicant first name -->
+    	<legend>Name:</legend>
+      <label for="first-name" >Enter your first name:</label>
+      <input type="text" name="first-name" autofocus><br>
+<!-- Applicant middle initial -->  
+      <label for="middle-initial" >Enter your middle initial:</label>
+      <input type="text" name="middle initial" autofocus><br>
+<!-- Applicant last name -->
+      <label for="last-name" >Enter your last name:</label>
+      <input type="text" name="last name" autofocus> 
+
+    </fieldset>
+
+
+<!-- Applicant address -->
+    <fieldset>
+    	<legend>Street Address</legend>
+      <label for="Street Address" >Enter your atreet address:</label>
+      <input type="text" name="street address" autofocus>
+    </fieldset>
+
+
+<!-- Applicant occupation -->
+    <fieldset>
+    	<legend>Occupation</legend>
+      <label for="" >Enter your occupation:</label>
+      <input type="text" name="" autofocus>
+    </fieldset>
+
+
+<!-- Applicant employer -->
+    <fieldset>
+    	<legend>Employer</legend>
+      <label for="" >Enter your employer:</label>
+      <input type="text" name="" autofocus><br>
+<!-- Employer address -->
+      <label for="" >Enter your employer address:</label>
+      <input type="text" name="" autofocus>
+    
+    </fieldset>
+
+
+<!-- Type of loan select element with these options: -->
+	<fieldset>
+      <legend>Type of loan</legend>
+
+      <input type="radio" name="loan" value="Commercial"> Commercial
+      <input type="radio" name="loan" value="Real estate"> Real estate
+      <input type="radio" name="loan" value="powerpoint"> Powerpoint
+      <input type="radio" name="loan" value="Personal"> Personal
+      <input type="radio" name="loan" value="Mortgage"> Mortgage
+
+    </fieldset>
+
+		
+<!-- Requested amount of loan -->
+		<fieldset>
+    	<legend>Requested amount of loan</legend>
+
+      <label for="first-name" >Loan amount: $</label>
+      <input type="text" name="first-name" autofocus><br>
+		</fieldset>
+
+
+<!-- Radio button elements for loan length -->
+		<fieldset>
+      <legend>loan length</legend>
+
+      <input type="radio" name="loan-length" value="word"> 5 years
+      <input type="radio" name="loan-length" value="excel"> 15 years
+      <input type="radio" name="loan-length" value="powerpoint"> 30 years
+    </fieldset>
+
+
+<!-- Checkbox group for special conditions -->
+		<fieldset>
+      <legend>What type of customer are you?</legend>
+
+      <input type="checkbox" name="dwn" value="student"> I have a down payment
+      <input type="checkbox" name="out" value="advanced"> Out-of-state resident
+      <input type="checkbox" name="married" value="whistlepig"> Married
+      <input type="checkbox" name="co" value="whistlepig"> Loan will be co-signed
+    </fieldset>
+
+
+<!-- A text area to allow for additional comments -->
+		<fieldset>
+      <legend>Give us feedback</legend>
+
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments"></textarea>
+    </fieldset>
+
+
+<!-- Additional Information -->
+		<fieldset>
+			<legend>Additional Information</legend>
+
+			<label for="email-address">Applicant email address</label>
+      <input type="email" required/ name="email" placeholder="you@somewhere.com"><br>
+
+			<label for="telephone">Applicant phone number</label>
+      <input type="tel" name="telephone" placeholder="888-888-8888">
+
+		</fieldset>
+
+
+ </form>
+
+
+
+
+ </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- USER TEMPERATURE -->
+	
+	<section>
+		<fieldset>
+      <legend>Temperature</legend>
+      <label for="temp" >Enter your temperature:</label>
+      <input id = "tempInput" type="number" autofocus>
+    </fieldset>
+	</section>
+
+
+<!-- SELECTOR -->
+
+	<section>
+		<fieldset>
+	     	<legend>Celsius or Fahrenheit</legend>
+
+	     	<input id="radioSelector" type="radio" name="product-type" value="Celsius"> To Celsius
+	    	<input id="radioSelectorII" type="radio" name="product-type" value="Fahrenheit"> To Fahrenheit
+	    </fieldset>
+	</section>
+
+
+<!-- CONVERT BUTTON -->
+
+	<section>
+		<button id="converter">
+			Convert!
+		</button>
+	</section>
+
+
+<!-- CLEAR BUTTON -->
+
+	<section>
+		<button id="clear">
+			Clear
+		</button>
+	</section>
+	
+	<div>
+		The conversion is:
+	</div>
+	<div id="answer">
+		<!-- HERE IS WHERE THE ANSWER GOES -->
+	</div>
+
+
+
+
+	<script src="converter.js"></script>
+</body>
+</html>

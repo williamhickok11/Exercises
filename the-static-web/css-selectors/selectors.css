@@ -1,0 +1,51 @@
+header {
+	border: 1px solid green;
+}
+
+header ul li {
+	list-style: none;
+	display: inline;
+	padding-right: 7px;
+}
+
+.disabled {
+	color: grey;
+}
+
+.month-list ul a {
+	color: purple;
+}
+
+.active {
+	color: yellow;
+}
+
+.blue {
+	color: blue;
+}
+
+.red  {
+	color: red;
+}
+
+.red + h4 {
+	background-color: red;
+}
+
+.blue + h4 {
+	background-color: blue;
+}
+
+.grandparent > h4 {
+	border: 1px solid black;
+	border-radius: 15px;
+}
+
+.promo {
+	font-weight: 900;
+	color: grey;
+}
+
+.padded  span input {
+	height: 25px;
+}

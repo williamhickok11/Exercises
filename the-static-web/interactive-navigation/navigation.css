@@ -1,0 +1,15 @@
+ul li {
+	display: inline;
+	text-decoration: none;
+}
+
+ul a:hover {
+	color: red;
+	background-color: green;
+}
+
+ul li:active {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
