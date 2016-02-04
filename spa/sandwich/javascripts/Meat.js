@@ -1,4 +1,6 @@
 // This SandwichMaker IIFE augments the original one
+var totalPrice = 0;
+
 var SandwichMaker = (function(maker) {
 
   // Private variable to store the different meat prices
@@ -12,7 +14,7 @@ var SandwichMaker = (function(maker) {
     ham: 2.50,
     turkey: 2.00,
     bacon: 4.00,
-    nomeat: 0.00
+    noMeat: 0.00
   }
 
   var cheesePrice = {
@@ -36,158 +38,89 @@ var SandwichMaker = (function(maker) {
     noVeggies: 0.00
   }
 
-  // Augment the original object with another method
-  maker.addMeat = function() {
-    var meatTotal;
 
-    if (document.getElementById("ham").checked) {
-      var hamTotal = meatPrice.ham;
-      console.log(hamTotal);
+  // var priceDisplay = function(selectedItem) {
+  //   if (document.getElementById(selectedItem).checked) {  
+  //     totalPrice += priceAdder;
+  //   } else {
+  //     totalPrice -= priceAdder;
+  //   };
+  //   totalPrice = parseFloat(totalPrice.toFixed(2));
+  //   document.getElementById("finalSand").innerHTML = totalPrice;
+  //   console.log("added price:", totalPrice);
+  // };
+
+
+  maker.addBread = function(selectedBread) {
+    var priceAdder = breadPrice[selectedBread];
+    console.log("bread price:", priceAdder);
+    if (document.getElementById(selectedBread).checked) {  
+      totalPrice += priceAdder;
     } else {
-      var hamTotal = 0;
+      totalPrice -= priceAdder;
     };
+    totalPrice = parseFloat(totalPrice.toFixed(2));
+    document.getElementById("finalSand").innerHTML = "$" + totalPrice;
+    console.log("added price:", totalPrice);
 
-    if (document.getElementById("turkey").checked){
-      var turkeyTotal = meatPrice.turkey;
-      console.log(turkeyTotal);
+  }
+
+  maker.addMeat = function(selectedMeat) {
+    var priceAdder = meatPrice[selectedMeat];
+    console.log("added price:", priceAdder);
+    if (document.getElementById(selectedMeat).checked) {
+      totalPrice += priceAdder;
     } else {
-      var turkeyTotal = 0;
+      totalPrice -= priceAdder;
     };
+    totalPrice = parseFloat(totalPrice.toFixed(2));
+    document.getElementById("finalSand").innerHTML = "$" + totalPrice;
+    console.log("added price:", totalPrice);
+  }
 
-    if (document.getElementById("bacon").checked){
-      var baconTotal = meatPrice.bacon;
-      console.log(baconTotal);
+  maker.addCheese = function(selectedCheese) {
+    var priceAdder = cheesePrice[selectedCheese];
+    console.log("added price:", priceAdder);
+    if (document.getElementById(selectedCheese).checked) {
+      totalPrice += priceAdder;
     } else {
-      var baconTotal = 0;
+      totalPrice -= priceAdder;
     };
+    totalPrice = parseFloat(totalPrice.toFixed(2));
+    document.getElementById("finalSand").innerHTML = "$" + totalPrice;
+    console.log("added price:", totalPrice);
+  }
 
-    //*** GET MEAT TOTAL ***//
-    meatTotal = hamTotal + turkeyTotal + baconTotal;
-    console.log("meatTotal", meatTotal);
-    return meatTotal;
-  };
-
-  maker.addCheese = function() {
-    var cheeseTotal;
-
-    if (document.getElementById("provolone").checked){
-      var provoloneTotal = cheesePrice.provolone;
-      console.log(provoloneTotal);
+  maker.addCondiment = function(selectedCondiment) {
+    var priceAdder = condimentPrice[selectedCondiment];
+    console.log("added price:", priceAdder);
+    if (document.getElementById(selectedCondiment).checked) {
+      totalPrice += priceAdder;
     } else {
-      var provoloneTotal = 0;
+      totalPrice -= priceAdder;
     };
+    totalPrice = parseFloat(totalPrice.toFixed(2));
+    document.getElementById("finalSand").innerHTML = "$" + totalPrice;
+    console.log("added price:", totalPrice);
+  }
 
-    if (document.getElementById("american").checked){
-      var americanTotal = cheesePrice.american;
-      console.log(americanTotal);
+   maker.addVeggie = function(selectedVeggie) {
+    var priceAdder = veggiePrice[selectedVeggie];
+    console.log("added price:", priceAdder)
+    if (document.getElementById(selectedVeggie).checked) {
+      totalPrice += priceAdder;
     } else {
-      var americanTotal = 0;
+      totalPrice -= priceAdder;
     };
-
-    if (document.getElementById("swiss").checked){
-      var swissTotal = cheesePrice.swiss;
-      console.log(swissTotal);
-    } else {
-      var swissTotal = 0;
-    };
-
-    cheeseTotal = provoloneTotal + americanTotal + swissTotal;
-    console.log("cheeseTotal", cheeseTotal);
-    return cheeseTotal;
-  };
+    totalPrice = parseFloat(totalPrice.toFixed(2));
+    document.getElementById("finalSand").innerHTML = "$" + totalPrice;
+    console.log("added price:", totalPrice);
+  }
 
 
-  maker.addCondiments = function() {
-    var condimentTotal;
 
-    if (document.getElementById("ketchup").checked){
-      var ketchupTotal = condimentPrice.ketchup;
-      console.log(ketchupTotal);
-    } else {
-      var ketchupTotal = 0;
-    };
-
-    if (document.getElementById("mustard").checked){
-      var mustardTotal = condimentPrice.mustard;
-      console.log(mustardTotal);
-    } else {
-      var mustardTotal = 0;
-    };
-
-    if (document.getElementById("mayo").checked){
-      var mayoTotal = condimentPrice.mayo;
-      console.log(mayoTotal);
-    } else {
-      var mayoTotal = 0;
-    };
-
-    condimentTotal = ketchupTotal + mustardTotal + mayoTotal;
-    console.log("condimentTotal", condimentTotal);
-    return condimentTotal;
-  };
-
-  maker.addBread = function() {
-    var breadTotal;
-
-    if (document.getElementById("wheat").checked){
-      var wheatTotal = breadPrice.wheat;
-      console.log(wheatTotal);
-    } else {
-      var wheatTotal = 0;
-    };
-
-    if (document.getElementById("white").checked){
-      var whiteTotal = breadPrice.white;
-      console.log(whiteTotal);
-    } else {
-      var whiteTotal = 0;
-    };
-
-    if (document.getElementById("italian").checked){
-      var italianTotal = breadPrice.italian;
-      console.log(italianTotal);
-    } else {
-      var italianTotal = 0;
-    };
-
-    breadTotal = wheatTotal + whiteTotal + italianTotal;
-    console.log("breadTotal", breadTotal);
-    return breadTotal;
-  };
-
-  maker.addVeggies = function() {
-    var veggieTotal;
-
-    if (document.getElementById("lettuces").checked){
-      var lettucesTotal = veggiePrice.lettuces;
-      console.log(lettucesTotal);
-    } else {
-      var lettucesTotal = 0;
-    };
-
-    if (document.getElementById("olives").checked){
-      var olivesTotal = veggiePrice.olives;
-      console.log(olivesTotal);
-    } else {
-      var olivesTotal = 0;
-    };
-
-    if (document.getElementById("greenPeppers").checked){
-      var greenPeppersTotal = veggiePrice.greenPeppers;
-      console.log(greenPeppersTotal);
-    } else {
-      var greenPeppersTotal = 0;
-    };
-
-    veggieTotal = lettucesTotal + olivesTotal + greenPeppersTotal;
-    console.log("veggieTotal", veggieTotal);
-    return veggieTotal;
-  };
-
-  
-
-
-  // Return the new, augmented object with the new method on it
   return maker;
 })(SandwichMaker);
+
+
  
