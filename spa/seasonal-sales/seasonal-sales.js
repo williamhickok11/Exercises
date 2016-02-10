@@ -1,11 +1,3 @@
-// Your job is to build a web page that lists all of the 
-
-// Additionally, put a <select> element at the top of the page that contains all possible values of the season_discount key in the categories file. As soon as you select one of the seasons, all prices on the page should immediately be discounted by the corresponding percentage.
-
-// For example, when Spring is chosen, all products in the corresponding Household category should have their prices updated with a 15% discount off the base price.
-
-// The two JSON representations above should be in two files: products.json, and categories.json. You should load both file via XHRs and store the contents in two different JavaScript variables in your code.
-
 var productsData;
 var loadProducts = function() {
   console.log("loadProducts");
@@ -36,6 +28,7 @@ var trialRun = function() {
 
     var dropDownSelect = document.getElementById("selectDropDown").value;
     var priceClassName = document.getElementsByClassName("price");
+    
     for (var i = 0; i < priceClassName.length; i++) {
       
       var productPrice = productsData.products[i].price
@@ -83,15 +76,3 @@ productsRequest.send();
 
 
 
-
-
-// var hello = {
-//   title: "Samurai",
-//   name: "Tomoe Gozen",
-//   bio: "Serving under Minamoto Yoshinaka, Tomoe was one of his finest soldiers, and her skills in battle dwarfed many of those held by even the strongest men in her unit.",
-//   image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Tomoe-Gozen.jpg",
-//   lifespan: {
-//     birth: 1747,
-//     death: 1797
-//     }
-// }

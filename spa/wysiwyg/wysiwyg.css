@@ -1,0 +1,26 @@
+img {
+  width: 100px;
+}
+
+div {
+  border: 2px solid black;
+  width: 40%;
+  display: inline-block;
+}
+
+header, section, footer {
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+
+.border {
+  border: 2px dotted blue;
+}
+
+.background0 {
+  background-color: lightblue;
+}
+
+.background1 {
+  background-color: lightyellow;
+}

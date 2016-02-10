@@ -1,13 +1,14 @@
 function showCarnivores (carnivores) {
-  console.log(carnivores);
+  document.getElementById("thisDiv").innerHTML = carnivores
 }
 
-function showHerbivores (herbivores) {
-  console.log(herbivores);
+function showHerbivores () {
+
 }
 
 Predator.loadCarnivores(showCarnivores);
-Predator.loadHerbivores(showHerbivores);
+
+
 
 
 
