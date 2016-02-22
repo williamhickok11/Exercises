@@ -62,7 +62,6 @@ var SandwichMaker = (function(maker) {
     totalPrice = parseFloat(totalPrice.toFixed(2));
     document.getElementById("finalSand").innerHTML = "$" + totalPrice;
     console.log("added price:", totalPrice);
-
   }
 
   maker.addMeat = function(selectedMeat) {

@@ -1,0 +1,20 @@
+{
+  "name": "calculator",
+  "version": "0.0.0",
+  "homepage": "https://github.com/williamhickok11/Exercises",
+  "authors": [
+    "William Hickok <williamhickok11@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jQuery": "~2.2.0",
+    "jquery": "~2.2.0"
+  }
+}
